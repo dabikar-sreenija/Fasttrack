@@ -1,23 +1,17 @@
-package com.day1;
-import java.util.Scanner;
+package com.day2;
+
 public class Program8 {
-	 public static void main(String[] args) {
-         Scanner scanner = new Scanner(System.in);
-         System.out.print("Enter a string: ");
-         String str = scanner.nextLine();
-         String reversedStr = "";
-        scanner.close();
-         for (int i = str.length() - 1; i >= 0; i--) {
-             reversedStr += str.charAt(i);
-         }
+	public static void main(String args[]) 
+	{
+	 
+	Program7 id = new Program7();
+	 //Instance method is being called using the object of the class
+	id.callme();
+	 //Static variable is accessed with the class name
+	System.out.println("The value of a = " + Program7.a);
+	System.out.println();
 
-         if (str.equals(reversedStr)) {
-             System.out.println(str + " is a palindrome.");
-         } else {
-             System.out.println(str + " is not a palindrome.");
-         }
-     }
- }
+	}
 
 
-
+}

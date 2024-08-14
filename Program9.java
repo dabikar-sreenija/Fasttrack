@@ -1,23 +1,14 @@
-package com.day1;
-import java.util.Scanner;
+package com.day2;
+
 public class Program9 {
-
-	  public static void main(String[] args) {
-          Scanner scanner = new Scanner(System.in);
-          System.out.print("Enter first number: ");
-          int num1 = scanner.nextInt();
-          System.out.print("Enter second number: ");
-          int num2 = scanner.nextInt();
-          
-          num1 = num1 + num2;
-          num2 = num1 - num2;
-          num1 = num1 - num2;
-           scanner.close();
-          System.out.println("After swapping: ");
-          System.out.println("First number: " + num1);
-          System.out.println("Second number: " + num2);
-      }
-  }
-  
+	static int a = 13; //static variable 
+	 static int b = 1199; // static variable
+	 int c=10; // instance varaible
+	 static void callme() 
+	{
+	System.out.println("The value of a = " + a);// static method can access static variable
+	//System.out.println("The value of c = " + c);// static method can not access instance varaible
+	}
 
 
+}

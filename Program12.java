@@ -1,31 +1,14 @@
-package com.day1;
-import java.util.Scanner;
-public class Program12 {
-	public static void main(String[] args) { 
-		Scanner scanner = new Scanner(System.in);
+package com.day2;
 
-		 // Prompt the user to enter the first string 
+public class Program12 extends Program11{
+	// This method is hidden by display() in program11
+    public static void display() {
+         System.out.println("Static or class method from 12");
+    }
+     
+    // This method overrides print() in program11
+    public void print() {
+         System.out.println("Non-static or Instance method from 12");
+   }
 
-		System.out.print("Enter the first string: "); 
-		String str1 = scanner.nextLine(); 
-
-		// Prompt the user to enter the second string 
-
-		System.out.print("Enter the second string: "); 
-		String str2 = scanner.nextLine(); 
-
-		// Concatenate the two strings
-
-		 String concatenatedString = str1 + str2; 
-
-		// Print the result
-
-		 System.out.println("The concatenated string is: " + concatenatedString); 
-
-		// Close the scanner 
-		scanner.close();
-
-		   }
-		 }
-
-
+}

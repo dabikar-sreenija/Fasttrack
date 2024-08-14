@@ -1,26 +1,18 @@
-package com.day1;
-import java.util.Scanner;
+package com.day2;
+
 public class Program13 {
-	  public static void main(String[] args) {
-	        Scanner scanner = new Scanner(System.in);
-
-	        // Prompt the user to enter a year
-	        System.out.print("Enter a year: ");
-	        int year = scanner.nextInt();
-
-	        // Check if the year is a leap year
-	        boolean isLeapYear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
-
-	        // Print the result
-	        if (isLeapYear) {
-	            System.out.println(year + " is a leap year.");
-	        } else {
-	            System.out.println(year + " is not a leap year.");
-	        }
-
-	        // Close the scanner
-	        scanner.close();
+	public static void main(String args[ ])  {
+	       Program11 obj = new Program12();
+	        
+	       // As per overriding rules this should call to class program12 static
+	       // overridden method. Since static method can not be overridden, it
+	       // calls program 11 display()
+	       obj.display(); 
+	        
+	       // Here overriding works and Derive's print() is called
+	       obj.print();    
 	    }
-	}
+
+}
 
 

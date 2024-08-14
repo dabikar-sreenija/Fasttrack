@@ -1,33 +1,33 @@
-package com.day1;
-import java.util.Scanner;
+package com.day2;
 public class Program18 {
+	private String doors;
+	private String engine;
+	private String driver;
+	private int speed;
+ 
+	//Parameterized constructor
+	public Program18(String doors, String engine, String driver, int speed) {
+		this.doors = doors;
+		this.engine = engine;
+		this.driver = driver;
+		this.speed = speed;
+	}
+ 
+	public String run() {
+		if(doors.equals("closed") && engine.equals("on")&& driver.equals("seated") 
+				&& speed >0) {
+			return "car is running";
+		}else {
+			return "car is not running";
+		}
+	}
+	public static void main(String[] args) {
+		Program18 c2 = new Program18("closed"	, "on", "seated", 10);
+		
+		System.out.println(c2.run());
+	}
 
-	 public static void main(String[] args) 
-	 { 
-	 Scanner scanner = new Scanner(System.in); 
 
-	 // Prompt the user to enter a number 
 
-	 System.out.print("Enter a number: ");
-	  int number = scanner.nextInt();
-	  
-	 // Prompt the user to enter the range 
 
-	 System.out.print("Enter the range: "); 
-	 int range = scanner.nextInt();
-
-	  // Print the multiplication table
-	  
-	 System.out.println("Multiplication Table for " + number + ":"); 
-	 for (int i = 1; i <= range; i++)
-	  { 
-	 System.out.println(number + " * " + i + " = " + (number * i)); 
-	 } 
-
-	 // Close the scanner 
-
-	 scanner.close();
-	    }
-	  }
-
-	
+}

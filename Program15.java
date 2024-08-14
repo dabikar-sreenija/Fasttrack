@@ -1,29 +1,20 @@
-package com.day1;
-import java.util.Scanner;
+package com.day2;
+
 public class Program15 {
-
-	public static void main(String[] args) { 
-
-		Scanner scanner = new Scanner(System.in);
-
-		 // Prompt the user to enter a number 
-		System.out.print("Enter a number: "); 
-		int n = scanner.nextInt(); 
-
-		// Calculate the sum of natural numbers up to n
-
-		 int sum = 0; 
-		 for (int i = 1; i <= n; i++)
-		 { 
-		sum += i;
-		 } 
-
-		// Print the sum 
-		System.out.println("Sum of natural numbers up to " + n + " is: " + sum); 
-
-		// Close the scanner 
-		scanner.close();
-		   } 
-		}
+	public  void foo() {
+		String A = "Sree";
+		System.out.println("Test.foo() called "+A);
+	}
+	public  void foo(int a) {
+		a=13;
+		System.out.println("Test.foo(int) called "+a);
+	}
+	public static void main(String args[])
+	{
+		Program15 t1 = new Program15();
+		t1.foo();
+		t1.foo(10);
+	}
 
 
+}

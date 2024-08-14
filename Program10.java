@@ -1,18 +1,12 @@
-package com.day1;
-import java.util.Scanner;
+package com.day2;
+
 public class Program10 {
+	public static void main(String args[]) 
+	{
+	 //Static method is being called using the name of the class
+	Program9.callme();
+	 //Static variable is accessed with the class name
+	System.out.println("The value of b = " + Program9.a);
+	}
 
-	  public static void main(String[] args) {
-          Scanner scanner = new Scanner(System.in);
-          System.out.print("Enter a number: ");
-          int num = scanner.nextInt();
-          int sum = 0;
-        scanner.close();
-          while (num != 0) {
-              sum += num % 10;
-              num /= 10;
-          }
-
-          System.out.println("Sum of digits: " + sum);
-      }
 }

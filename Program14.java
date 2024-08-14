@@ -1,27 +1,23 @@
-package com.day1;
-import java.util.Scanner;
+package com.day2;
+
 public class Program14 {
-
-	public static void main(String[] args) { 
-		Scanner scanner = new Scanner(System.in); 
-
-		// Prompt the user to enter a number
-
-		 System.out.print("Enter a number: "); 
-		int number = scanner.nextInt(); 
-
-		// Reverse the number
-		int reversedNumber = 0; 
-		while (number != 0) {
-		 int digit = number % 10;
-		 reversedNumber = reversedNumber * 10 + digit; number /= 10; 
-		} 
-		// Print the reversed number 
-
-		System.out.println("Reversed number: " + reversedNumber);
-
-		 // Close the scanner 
-		scanner.close(); 
+	public static void foo() {
+		System.out.println("Test.foo() called ");
+	}
+	public static void foo(int a) {
+		a=10;
+		System.out.println("Test.foo(int) called "+a);
+	}
+	
+	public static void foo(float b) {
+		b=3.14f;
+		System.out.println("float value is displayed"+b);
+	}
+	public static void main(String args[])
+	{
+		Program14.foo();
+		Program14.foo(10);
+	    Program14.foo(3.14f);
+	}
 }
-}
-   
+	
